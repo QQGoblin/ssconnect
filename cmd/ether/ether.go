@@ -17,7 +17,7 @@ func init() {
 	Command.PersistentFlags().StringVarP(&iface, "iface", "i", "eth0", "bind socket to interface")
 	Command.PersistentFlags().Uint16Var(&ethernetType, "etherType", 0xCCCC, "custom ether type define")
 
-	SendCMD.PersistentFlags().StringVarP(&dst, "dst", "d", "", "destination mac")
+	SendCMD.PersistentFlags().StringVarP(&dst, "dst", "d", "ff:ff:ff:ff:ff:ff", "destination mac")
 	SendCMD.PersistentFlags().StringVarP(&src, "src", "s", "aa:bb:cc:11:11:11", "source mac")
 
 	Command.AddCommand(ReceiveCMD)
